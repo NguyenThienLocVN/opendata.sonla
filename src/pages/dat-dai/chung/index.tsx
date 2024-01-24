@@ -116,9 +116,6 @@ const LandManagementCommon = (props: LicenseFeeProps) => {
     getDataLicenseFee();
   }, [path, postSuccess]);
 
-  // Calculate the total of resData.totalMoney
-  const totalMoneySum = resData.reduce((sum, item: any) => sum + (item.totalMoney || 0), 0);
-
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={12} className='text-center'>

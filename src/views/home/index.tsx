@@ -1,74 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Grid from '@mui/material/Grid';
-import { getData } from 'src/api/axios';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box, CardActionArea } from '@mui/material';
-import { styled } from '@mui/material/styles'
-
 
 // ** Next Imports
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-
-// ** Components
-import LandManagementCommon from 'src/pages/dat-dai/chung'
-
-const LinkStyled = styled('a')(({ theme }) => ({
-    fontSize: '1rem',
-    textDecoration: 'none',
-    color: '#fff',
-    fontWeight: 400,
-}))
 
 const Home = () => {
-    const [lcFee, setLicFee] = useState({ btnmt: [], ubnd: [] });
-    const [lic, setLic] = useState({ total: 0, btnmt: 0, ubnd: 0 });
-    const [loading, setLoading] = useState(false);
-
-    const isMounted = useRef(true);
-
-    const getDataLicenseFees = async () => {
-        setLoading(true);
-        try {
-            const btnmtData = await getData('tien-cap-quyen/danh-sach/bo-cap');
-            const ubndData = await getData('tien-cap-quyen/danh-sach/tinh-cap');
-
-            if (isMounted.current) {
-                setLicFee({ btnmt: btnmtData, ubnd: ubndData });
-            }
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const getDataLicenses = async () => {
-        try {
-            const data = await getData('giay-phep/dem-theo-co-quan-cp');
-            if (isMounted.current) {
-                setLic({ total: data.total, btnmt: data.btnmt, ubnd: data.ubndt });
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    useEffect(() => {
-        isMounted.current = true;
-
-        return () => {
-            isMounted.current = false;
-        };
-    }, []);
-
-    useEffect(() => {
-        getDataLicenseFees();
-        getDataLicenses();
-    }, []);
 
     return (
         <>
@@ -92,11 +33,11 @@ const Home = () => {
                 </Grid>
                 <Grid container md={6} alignItems='center' justifyContent='flex-end'>
                     <Link passHref href='/'>
-                        <LinkStyled>Đăng nhập</LinkStyled>
+                        <Typography>Đăng nhập</Typography>
                     </Link> 
                     <Typography variant='h6' align='right' sx={{color: '#fff'}}>&nbsp;|&nbsp;</Typography>
                     <Link passHref href='/'>
-                        <LinkStyled>Hướng dẫn sử dụng</LinkStyled>
+                        <Typography>Hướng dẫn sử dụng</Typography>
                     </Link>
                     
                 </Grid>

@@ -12,9 +12,6 @@ import Typography, { TypographyProps } from '@mui/material/Typography'
 // ** Type Import
 import { Settings } from 'src/@core/context/settingsContext'
 
-// ** Configs
-import themeConfig from 'src/configs/themeConfig'
-
 interface Props {
   hidden: boolean
   settings: Settings
@@ -31,14 +28,6 @@ const MenuHeaderWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   paddingRight: theme.spacing(4.5),
   transition: 'padding .25s ease-in-out',
   minHeight: theme.mixins.toolbar.minHeight
-}))
-
-const HeaderTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
-  fontWeight: 600,
-  lineHeight: 'normal',
-  textTransform: 'uppercase',
-  color: theme.palette.text.primary,
-  transition: 'opacity .25s ease-in-out, margin .25s ease-in-out'
 }))
 
 const StyledLink = styled('a')({
