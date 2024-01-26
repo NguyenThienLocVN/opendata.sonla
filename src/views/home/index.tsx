@@ -15,7 +15,7 @@ const Home = () => {
         <>
             <Box sx={{ p: 2, display: 'flex', background: '#00466e', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Grid container md={6} alignItems='center'>
-                    <img src="/images/logos/logo_sotnmt.png" width={60} height={60} alt="logo-page" />
+                    <CardMedia component="img" image="/images/logos/logo_sotnmt.png" alt="logo-page" sx={{width: "60px", height: "60px"}} />
                     <Typography
                         variant='h6'
                         align='left'

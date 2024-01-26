@@ -14,6 +14,7 @@ import InputLabel from '@mui/material/InputLabel'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia';
 import FormControl from '@mui/material/FormControl'
 import OutlinedInput from '@mui/material/OutlinedInput'
 import { styled } from '@mui/material/styles'
@@ -116,15 +117,14 @@ const LoginPage = () => {
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
           <Box sx={{ mb: 3, display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/images/logos/logo_sotnmt.png" width={70} height={70} alt="logo-page" />
+            <CardMedia component="img" image="/images/logos/logo_sotnmt.png" alt="logo-page" sx={{width: "60px", height: "60px"}} />
             <Typography
-              variant='h6'
               align='center'
               sx={{
                 color: '#dc3545 !important',
                 mt: 2,
                 mx: 3,
-                lineHeight: 1,
+                lineHeight: '30px',
                 fontWeight: 600,
                 width: '100%',
                 textTransform: 'uppercase',
@@ -198,9 +198,6 @@ const LoginPage = () => {
               sx={{ mb: 4, display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}
             >
               <FormControlLabel control={<Checkbox value={values.rememberMe} onChange={handleChange('rememberMe')} />} label='Lưu đăng nhập' />
-              <Link passHref href='/'>
-                <LinkStyled onClick={e => e.preventDefault()}>Quên mật khẩu?</LinkStyled>
-              </Link>
             </Box>
             <Button
               fullWidth
