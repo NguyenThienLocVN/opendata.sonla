@@ -85,7 +85,7 @@ const UserDropdown = () => {
     }
   }
 
-  const avatarImg = <AccountOutline sx={{ marginRight: 2, width: 30, height: 30 }} onClick={handleDropdownOpen} />
+  const avatarImg = <AccountOutline sx={{ marginRight: 2, width: 30, height: 30, color: '#fff' }} onClick={handleDropdownOpen} />
 
   return (
     <Fragment>

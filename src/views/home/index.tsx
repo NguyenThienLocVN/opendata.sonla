@@ -8,6 +8,7 @@ import { Box, CardActionArea } from '@mui/material';
 
 // ** Next Imports
 import Link from 'next/link'
+import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown';
 
 const Home = () => {
 
@@ -33,13 +34,10 @@ const Home = () => {
                 </Grid>
                 <Grid container md={6} alignItems='center' justifyContent='flex-end'>
                     <Link passHref href='/'>
-                        <Typography>Đăng nhập</Typography>
+                        <Typography sx={{color: '#fff', fontSize: '12px'}}>Hướng dẫn sử dụng</Typography>
                     </Link> 
                     <Typography variant='h6' align='right' sx={{color: '#fff'}}>&nbsp;|&nbsp;</Typography>
-                    <Link passHref href='/'>
-                        <Typography>Hướng dẫn sử dụng</Typography>
-                    </Link>
-                    
+                    <UserDropdown />
                 </Grid>
             </Box>
             <Grid container className='content-center'>

@@ -7,7 +7,7 @@ body {
   height: 100%;
 }
 
-#__next {
+.background-login {
 	background: linear-gradient(-45deg, #35d940, #19a134, #1c9ac8, #1c41c5) no-repeat bottom ;
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;

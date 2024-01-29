@@ -113,7 +113,7 @@ const LoginPage = () => {
   };
 
   return (
-    <Box className='content-center'>
+    <Box className='content-center background-login'>
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
           <Box sx={{ mb: 3, display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
