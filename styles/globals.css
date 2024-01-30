@@ -13,7 +13,18 @@ body {
 	animation: gradient 10s ease infinite;
 	height: 100vh;
 }
-
+.background-home{
+  background-image: url("../public/images/background.jpg"); 
+  background-color: #cccccc; 
+  height: 100%; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+.footer{
+  background: #00466e;
+  padding: 20px;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;

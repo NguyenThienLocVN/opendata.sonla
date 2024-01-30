@@ -23,7 +23,7 @@ const LandManagementCommon = (props: LicenseFeeProps) => {
   const [loading, setLoading] = useState(false)
 
   const columns: GridColDef[] = [
-    { field: 'id', headerAlign: 'center', headerName: 'ID', minWidth: 90 },
+    { field: 'stt', headerAlign: 'center', headerName: 'STT', minWidth: 90 },
     {
       field: 'soQDTCQ', headerAlign: 'center', headerName: 'Quyết định cấp quyền', minWidth: 180,
       renderCell: (data: any) => (
