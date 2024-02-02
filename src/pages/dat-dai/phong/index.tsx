@@ -24,8 +24,7 @@ const LandManagementCommon = () => {
       stt: 1,
       soQDTCQ: '19/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
       filePath: 'path/to/pdf2.pdf'
     },
     {
@@ -33,8 +32,7 @@ const LandManagementCommon = () => {
       stt: 2,
       soQDTCQ: '17/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       qd_bosung: { soQDTCQ: 'QD002', filePDF: 'path/to/pdf2.pdf' },
       filePath: 'path/to/pdf2.pdf'
@@ -44,8 +42,7 @@ const LandManagementCommon = () => {
       stt: 3,
       soQDTCQ: '16/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -54,8 +51,7 @@ const LandManagementCommon = () => {
       stt: 4,
       soQDTCQ: '15/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -64,8 +60,7 @@ const LandManagementCommon = () => {
       stt: 5,
       soQDTCQ: '14/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -74,8 +69,7 @@ const LandManagementCommon = () => {
       stt: 6,
       soQDTCQ: '10/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -84,8 +78,7 @@ const LandManagementCommon = () => {
       stt: 7,
       soQDTCQ: '11/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -94,8 +87,7 @@ const LandManagementCommon = () => {
       stt: 8,
       soQDTCQ: '08/VBHN-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -104,8 +96,7 @@ const LandManagementCommon = () => {
       stt: 9,
       soQDTCQ: '06/VBHN-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -114,8 +105,7 @@ const LandManagementCommon = () => {
       stt: 10,
       soQDTCQ: '05/VBHN-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+      trichyeuvb:'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     }

@@ -1,6 +1,6 @@
 import DialogsControl from 'src/@core/components/dialog-control';
 import { Add, CloudUpload, EditNote, Save } from "@mui/icons-material";
-import { Grid, Button, DialogActions, TextField, FormControlLabel, Checkbox, Autocomplete, CircularProgress, IconButton } from "@mui/material";
+import { Grid, Button, DialogActions, TextField, CircularProgress, IconButton } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from 'react';
 
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
@@ -24,9 +24,9 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
     });
 
     const [fileUpload, setFileUpload] = useState<any>()
-    const [supplementLicenseFee, setSupplementLicenseFee] = useState(false)
     const [listLicFee, setListLicFee] = useState([]);
-    const [fetching, setFetching] = useState(false);
+    console.log(listLicFee);
+    
     const [saving, setSaving] = useState(false);
 
 
@@ -45,7 +45,6 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
 
     useEffect(() => {
         const getDataLicenseFees = async () => {
-            setFetching(true)
             try {
                 if (router.pathname.split('/')[2] == 'bo-cap') {
                     const data = await getData('tien-cap-quyen/danh-sach/bo-cap');
@@ -57,7 +56,6 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
             } catch (error) {
                 setListLicFee([]);
             } finally {
-                setFetching(false)
             }
         };
         getDataLicenseFees();
@@ -120,42 +118,12 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
         <form onSubmit={handleSubmit}>
             <Grid container>
                 <Grid item xs={12} md={12} sx={{ my: 2 }}>
-                    <FormControlLabel
-                        label="Quyết định bổ xung"
-                        onChange={() => (setSupplementLicenseFee(!supplementLicenseFee))}
-                        control={<Checkbox checked={supplementLicenseFee} />}
-                    />
-                </Grid>
-                {supplementLicenseFee ? (
-                    <Grid xs={12} md={12} sx={{ my: 2 }}>
-                        {fetching ? (
-                            <CircularProgress size={20} />
-                        ) : (
-                            <Autocomplete
-                                onChange={(e: any, v: any) => setValues({ ...values, idCon: v.id })}
-                                size="small"
-                                options={listLicFee}
-                                getOptionLabel={(option: any) => option.soQDTCQ}
-                                renderInput={(params) => (
-                                    <TextField
-                                        {...params}
-                                        fullWidth
-                                        label="Chọn quyết định TCQ cần bổ xung"
-                                    />
-                                )}
-                            />
-                        )}
-
-                    </Grid>
-                ) : ''}
-
-                <Grid item xs={12} md={12} sx={{ my: 2 }}>
-                    <TextField size='small' type='text' fullWidth label='Số quyết định' placeholder='' value={values?.soQDTCQ || ''} onChange={handleChange('soQDTCQ')} />
+                    <TextField size='small' type='text' fullWidth label='Số hiệu văn bản' placeholder='' value={values?.soQDTCQ || ''} onChange={handleChange('soQDTCQ')} />
                 </Grid>
                 <Grid item xs={12} md={12} sx={{ my: 2 }}>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DatePicker
-                            label="Ngày ký"
+                            label="Ngày ban hành"
                             value={values.ngayKy || null}
                             onChange={(newngayKy: any) => setValues({ ...values, ngayKy: newngayKy })}
                             slotProps={{ textField: { size: 'small', fullWidth: true } }}
@@ -163,7 +131,7 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
                     </LocalizationProvider>
                 </Grid>
                 <Grid item xs={12} md={12} sx={{ my: 2 }}>
-                    <TextField size='small' type='text' fullWidth label='Tổng tiền' placeholder='' value={values?.tongTienCQ || 0} onChange={handleChange('tongTienCQ')} />
+                    <TextField size='small' type='text' fullWidth label='Trích yếu văn bản' placeholder=''  onChange={handleChange('tongTienCQ')} />
                 </Grid>
                 <Grid item xs={12} md={12} sx={{ my: 2 }}>
                     <Button
@@ -173,12 +141,9 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
                         startIcon={<CloudUpload />}
                         href={`#file-upload`}
                     >
-                        Upload file
+                        Tệp đính kèm
                         <VisuallyHiddenInput type="file" onChange={handleFileChange} accept='.pdf' />
                     </Button>
-                </Grid>
-                <Grid item xs={12} md={12} sx={{ my: 2 }}>
-                    <TextField size='small' type='text' fullWidth label='Ghi chú' placeholder='' value={values?.ghiChu || ''} onChange={handleChange('ghiChu')} />
                 </Grid>
             </Grid>
             <DialogActions sx={{ p: 0 }}>
@@ -190,7 +155,7 @@ const Form = ({ data, setPostSuccess, closeDialogs }: any) => {
 };
 
 const FormLicenseFee = ({ data, isEdit, setPostSuccess }: any) => {
-    const formTitle = isEdit ? 'Thay đổi thông tin tiền cấp quyền' : 'Thêm tiền cấp quyền';
+    const formTitle = isEdit ? 'Thay đổi thông tin dữ liệu chung' : 'Thêm dữ liệu chung';
 
     return (
         <DialogsControl>

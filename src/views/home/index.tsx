@@ -229,12 +229,11 @@ const Home = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container spacing={1} className="footer" sx={{ display:'flex',flexDirection:'column' }}>
-        <Typography sx={{ color: '#fff', fontSize: '24' }}>Sở TNMT Sơn La</Typography>
-        <Typography sx={{ color: '#fff', fontSize: '24' }}>Viện thủy văn môi trường và biến đổi khí hậu</Typography>
-        <Typography sx={{ color: '#fff', fontSize: '24' }}>mail</Typography>
-        <Typography sx={{ color: '#fff', fontSize: '24' }}>số điện thoại</Typography>
-        <Typography sx={{ color: '#fff', fontSize: '24' }}>địa chỉ</Typography>
+      <Grid container spacing={1} className="footer" sx={{ display:'flex',flexDirection:'column',alignItems:'center' }}>
+        <Typography sx={{ color: '#fff', fontSize: '20' }}>CỔNG THÔNG TIN DỮ LIỆU TÀI NGUYÊN MÔI TRƯỜNG TỈNH SƠN LA</Typography>
+        <Typography sx={{ color: '#fff', fontSize: '20' }}>Địa chỉ: Tầng 3 -4, Tòa nhà T2, Trung tâm hành chính tỉnh, Khu Quảng trường Tây Bắc, phường Tô Hiệu, TP Sơn La </Typography>
+        <Typography sx={{ color: '#fff', fontSize: '20' }}>Điện Thoại: 02123.799.888</Typography>
+        <Typography sx={{ color: '#fff', fontSize: '20' }}>Email:stnmt@sonla.gov.vn</Typography>
       </Grid>
     </>
   )

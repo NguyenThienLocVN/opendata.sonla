@@ -25,7 +25,7 @@ const LandManagementCommon = () => {
       soQDTCQ: '19/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
       trichyeuvb:
-        'Sửa đổi và bãi bỏ một số thông tư thuộc thẩm quyền ban hành của Bộ trưởng Bộ Tài nguyên và Môi trường',
+        'Cá nhân',
       filePath: 'path/to/pdf2.pdf'
     },
     {

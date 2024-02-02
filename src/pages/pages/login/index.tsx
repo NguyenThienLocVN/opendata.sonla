@@ -2,7 +2,6 @@
 import { ChangeEvent, MouseEvent, ReactNode, useState } from 'react'
 
 // ** Next Imports
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 // ** MUI Components
@@ -48,11 +47,11 @@ const Card = styled(MuiCard)<CardProps>(({ theme }) => ({
   [theme.breakpoints.up('sm')]: { width: '28rem' }
 }))
 
-const LinkStyled = styled('a')(({ theme }) => ({
-  fontSize: '0.875rem',
-  textDecoration: 'none',
-  color: theme.palette.primary.main
-}))
+// const LinkStyled = styled('a')(({ theme }) => ({
+//   fontSize: '0.875rem',
+//   textDecoration: 'none',
+//   color: theme.palette.primary.main
+// }))
 
 const FormControlLabel = styled(MuiFormControlLabel)<FormControlLabelProps>(({ theme }) => ({
   '& .MuiFormControlLabel-label': {
