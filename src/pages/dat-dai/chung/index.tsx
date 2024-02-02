@@ -125,12 +125,12 @@ const LandManagementCommon = () => {
   // const [loading, setLoading] = useState(false)
 
   const columns: GridColDef[] = [
-    { field: 'stt', headerAlign: 'center', align: 'center',headerName: 'STT', minWidth: 50 },
+    { field: 'stt', headerAlign: 'center', align: 'center', headerName: 'STT' },
     {
       field: 'soQDTCQ',
       headerAlign: 'center',
       headerName: 'Số hiệu văn bản',
-      minWidth: 200,
+
       renderCell: (data: any) => <ShowFilePDF name={data.row.soQDTCQ} src={data.row.filePDF} />
     },
     {
@@ -138,21 +138,20 @@ const LandManagementCommon = () => {
       align: 'center',
       headerAlign: 'center',
       headerName: 'Ngày ban hành',
-      minWidth: 200,
+
       renderCell: (data: any) => FormatDate(data.row.ngayKy)
     },
     {
       field: 'trichyeuvb',
       headerAlign: 'center',
       headerName: 'Trích yếu văn bản',
-      minWidth: 750
+      flex: 1
     },
     {
       field: 'downloadIcon',
       headerAlign: 'center',
       align: 'center',
       headerName: 'Tệp đính kèm',
-      minWidth: 120,
       sortable: false,
       renderCell: () => (
         <IconButton onClick={() => handleDownloadClick()}>
@@ -166,7 +165,6 @@ const LandManagementCommon = () => {
       field: 'actions',
       headerAlign: 'center',
       headerName: 'Thao tác',
-      minWidth: 100,
       sortable: false,
       renderCell: data => (
         <Box>
@@ -183,9 +181,9 @@ const LandManagementCommon = () => {
         <Paper elevation={3} sx={{ p: 0, height: '100%' }}>
           <Toolbar variant='dense'>
             <Grid container justifyContent={'end'}>
-            <Grid item xs={12} sm={12} md={4}>
-              <TextField sx={{ p: 0 }} size='small' fullWidth variant='outlined' placeholder='Số hiệu văn bản...' />
-            </Grid>
+              <Grid item xs={12} sm={12} md={4}>
+                <TextField sx={{ p: 0 }} size='small' fullWidth variant='outlined' placeholder='Số hiệu văn bản...' />
+              </Grid>
               <Grid item>
                 <FormLicenseFee setPostSuccess={handlePostSuccess} isEdit={false} />
               </Grid>

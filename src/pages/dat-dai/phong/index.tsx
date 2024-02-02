@@ -115,12 +115,11 @@ const LandManagementCommon = () => {
   // const [loading, setLoading] = useState(false)
 
   const columns: GridColDef[] = [
-    { field: 'stt', headerAlign: 'center', align: 'center',headerName: 'STT', minWidth: 50 },
+    { field: 'stt', headerAlign: 'center', align: 'center',headerName: 'STT', },
     {
       field: 'soQDTCQ',
       headerAlign: 'center',
       headerName: 'Số hiệu văn bản',
-      minWidth: 200,
       renderCell: (data: any) => <ShowFilePDF name={data.row.soQDTCQ} src={data.row.filePDF} />
     },
     {
@@ -128,21 +127,19 @@ const LandManagementCommon = () => {
       align: 'center',
       headerAlign: 'center',
       headerName: 'Ngày ban hành',
-      minWidth: 200,
       renderCell: (data: any) => FormatDate(data.row.ngayKy)
     },
     {
       field: 'trichyeuvb',
       headerAlign: 'center',
       headerName: 'Trích yếu văn bản',
-      minWidth: 750
+      flex: 1
     },
     {
       field: 'downloadIcon',
       headerAlign: 'center',
       align: 'center',
       headerName: 'Tệp đính kèm',
-      minWidth: 120,
       sortable: false,
       renderCell: () => (
         <IconButton onClick={() => handleDownloadClick()}>
@@ -156,7 +153,6 @@ const LandManagementCommon = () => {
       field: 'actions',
       headerAlign: 'center',
       headerName: 'Thao tác',
-      minWidth: 100,
       sortable: false,
       renderCell: data => (
         <Box>
