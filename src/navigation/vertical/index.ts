@@ -77,6 +77,14 @@ const navigation = (): VerticalNavItemsType => {
         {
           title: 'Cá nhân',
           path: '/tnn-ks-kttv/ca-nhan'
+        }, 
+        {
+          title: 'Website tài nguyên nước',
+          path: '#'
+        }, 
+        {
+          title: 'Website khí tượng thủy văn',
+          path: '#'
         }
       ]
     },

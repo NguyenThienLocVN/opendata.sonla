@@ -14,11 +14,8 @@ const Home = () => {
   return (
     <>
       <Box sx={{ p: 2, display: 'flex', background: '#00466e', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Grid  alignItems='center' sx={{display:'flex'}}>
-          <Avatar
-                src="/images/logos/logo_sotnmt.png"
-                sx={{ width: 60, height: 60,marginRight:"10px"}}
-              />
+        <Grid alignItems='center' sx={{ display: 'flex' }}>
+          <Avatar src='/images/logos/logo_sotnmt.png' sx={{ width: 60, height: 60, marginRight: '10px' }} />
           <Typography
             align='left'
             sx={{
@@ -44,7 +41,7 @@ const Home = () => {
         </Grid>
       </Box>
       <Grid container className='background-home'>
-        <Grid container xs={12} md={12} justifyContent='center' sx={{pt:40,mb:20}}>
+        <Grid container xs={12} md={12} justifyContent='center' sx={{ pt: 40, mb: 20 }}>
           <Grid container direction='row' justifyContent='center' spacing={1} xs={10} md={9} sx={{ p: 2 }}>
             <Link href='/dat-dai/chung'>
               <Grid item xs={6} md={2}>
@@ -70,40 +67,57 @@ const Home = () => {
                 </Card>
               </Grid>
             </Link>
-            <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component='img'
-                    image='/images/logos/giadat.png'
-                    alt='giadat'
-                    sx={{ margin: '20px auto', width: '75%' }}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
-                      Giá đất & GPMB
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-            <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component='img'
-                    image='/images/logos/hydrometeorology-sign.png'
-                    alt='hydrometeorology-sign'
-                    sx={{ margin: '20px auto', width: '75%' }}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
-                      TNN, KS, KTTV
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
+
+            <Link href='/gia-dat-gpmb/chung'>
+              <Grid item xs={6} md={2}>
+                <Card sx={{ maxWidth: 200 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component='img'
+                      image='/images/logos/giadat.png'
+                      alt='giadat'
+                      sx={{ margin: '20px auto', width: '75%' }}
+                    />
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        align='center'
+                        component='div'
+                        sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                      >
+                        Giá đất & GPMB
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            </Link>
+
+            <Link href='/tnn-ks-kttv/chung'>
+              <Grid item xs={6} md={2}>
+                <Card sx={{ maxWidth: 200 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component='img'
+                      image='/images/logos/hydrometeorology-sign.png'
+                      alt='hydrometeorology-sign'
+                      sx={{ margin: '20px auto', width: '75%' }}
+                    />
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        align='center'
+                        component='div'
+                        sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                      >
+                        TNN, KS, KTTV
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            </Link>
+            <Link href='/moi-truong/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -114,13 +128,20 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       Môi trường
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
+            <Link href='/thanh-tra/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -131,13 +152,20 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       Thanh tra
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
+            <Link href='/van-phong/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -148,16 +176,22 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       Văn phòng
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
           </Grid>
           <Grid container direction='row' justifyContent='center' spacing={1} xs={10} md={9} sx={{ p: 2 }}>
-           
+          <Link href='/dang-ky-dat-dai/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -168,13 +202,20 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       Văn phòng ĐKĐĐ
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
+            <Link href='/quan-trac/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -185,13 +226,20 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       Quan trắc
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
+            <Link href='/cntt/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -202,13 +250,20 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       CNTT
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
+            <Link href='/quy-dat/chung'>
             <Grid item xs={6} md={2}>
               <Card sx={{ maxWidth: 200 }}>
                 <CardActionArea>
@@ -219,19 +274,35 @@ const Home = () => {
                     sx={{ margin: '20px auto', width: '75%' }}
                   />
                   <CardContent>
-                    <Typography gutterBottom align='center' component='div' sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}>
+                    <Typography
+                      gutterBottom
+                      align='center'
+                      component='div'
+                      sx={{ fontSize: 16, color: '#083071', fontWeight: '500' }}
+                    >
                       Phát triển quỹ đất
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
+            </Link>
+            
           </Grid>
         </Grid>
       </Grid>
-      <Grid container spacing={1} className="footer" sx={{ display:'flex',flexDirection:'column',alignItems:'center' }}>
-        <Typography sx={{ color: '#fff', fontSize: '20' }}>CỔNG THÔNG TIN DỮ LIỆU TÀI NGUYÊN MÔI TRƯỜNG TỈNH SƠN LA</Typography>
-        <Typography sx={{ color: '#fff', fontSize: '20' }}>Địa chỉ: Tầng 3 -4, Tòa nhà T2, Trung tâm hành chính tỉnh, Khu Quảng trường Tây Bắc, phường Tô Hiệu, TP Sơn La </Typography>
+      <Grid
+        container
+        spacing={1}
+        className='footer'
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      >
+        <Typography sx={{ color: '#fff', fontSize: '20' }}>
+          CỔNG THÔNG TIN DỮ LIỆU TÀI NGUYÊN MÔI TRƯỜNG TỈNH SƠN LA
+        </Typography>
+        <Typography sx={{ color: '#fff', fontSize: '20' }}>
+          Địa chỉ: Tầng 3 -4, Tòa nhà T2, Trung tâm hành chính tỉnh, Khu Quảng trường Tây Bắc, phường Tô Hiệu, TP Sơn La{' '}
+        </Typography>
         <Typography sx={{ color: '#fff', fontSize: '20' }}>Điện Thoại: 02123.799.888</Typography>
         <Typography sx={{ color: '#fff', fontSize: '20' }}>Email:stnmt@sonla.gov.vn</Typography>
       </Grid>
