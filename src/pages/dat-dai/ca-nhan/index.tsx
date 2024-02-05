@@ -7,6 +7,9 @@ import { GridColDef } from '@mui/x-data-grid'
 import ShowFilePDF from 'src/@core/components/show-file-pdf'
 import DeleteData from 'src/@core/components/delete-data'
 import GetAppIcon from '@mui/icons-material/GetApp'
+import Error401 from 'src/pages/401'
+import { checkAccessPermission } from 'src/@core/layouts/checkAccessPermission'
+import { useRouter } from 'next/router'
 
 const LandManagementCommon = () => {
   const [postSuccess, setPostSuccess] = useState(false)
@@ -125,7 +128,7 @@ const LandManagementCommon = () => {
   // const [loading, setLoading] = useState(false)
 
   const columns: GridColDef[] = [
-    { field: 'stt', headerAlign: 'center', align: 'center',headerName: 'STT'},
+    { field: 'stt', headerAlign: 'center', align: 'center', headerName: 'STT' },
     {
       field: 'soQDTCQ',
       headerAlign: 'center',
@@ -173,15 +176,20 @@ const LandManagementCommon = () => {
     }
   ]
 
-  return (
+  const router = useRouter();
+  const routePath = router.pathname;
+  const routeSegment = routePath.split('/')[1];
+
+  return checkAccessPermission(routeSegment, 'view') ?
+  (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={12}>
         <Paper elevation={3} sx={{ p: 0, height: '100%' }}>
           <Toolbar variant='dense'>
             <Grid container justifyContent={'end'}>
-            <Grid item xs={12} sm={12} md={4}>
-              <TextField sx={{ p: 0 }} size='small' fullWidth variant='outlined' placeholder='Số hiệu văn bản...' />
-            </Grid>
+              <Grid item xs={12} sm={12} md={4}>
+                <TextField sx={{ p: 0 }} size='small' fullWidth variant='outlined' placeholder='Số hiệu văn bản...' />
+              </Grid>
               <Grid item>
                 <FormLicenseFee setPostSuccess={handlePostSuccess} isEdit={false} />
               </Grid>
@@ -191,7 +199,7 @@ const LandManagementCommon = () => {
         </Paper>
       </Grid>
     </Grid>
-  )
+  ) : <Error401 />
 }
 
 export default LandManagementCommon

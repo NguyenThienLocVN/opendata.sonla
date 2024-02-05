@@ -305,12 +305,7 @@ const navigation = (): VerticalNavItemsType => {
           title: 'Trang truy cập',
           icon: Tv,
           path: '/he-thong/trang-truy-cap'
-        },
-        {
-          title: 'Các chức năng',
-          icon: Functions,
-          path: '#'
-        },
+        }
       ]
     },
     {

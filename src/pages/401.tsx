@@ -22,18 +22,18 @@ const BoxWrapper = styled(Box)<BoxProps>(({ theme }) => ({
 
 const Error401 = () => {
   return (
-    <Box className='content-center' sx={{my: 'auto'}}>
+    <Box className='content-center' sx={{my: '200px'}}>
       <Box sx={{ p: 5, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
         <BoxWrapper>
-          <Typography variant='h1'>401</Typography>
+          <Typography variant='h3' sx={{py: 5}}>401 Unauthorized</Typography>
           <Typography variant='h5' sx={{ mb: 1, fontSize: '1.5rem !important' }}>
-            Bạn không được ủy quyền!! 🔐
+            Bạn không có quyền truy cập! 🔐
           </Typography>
-          <Typography variant='body2'>Bạn không có quyền truy cập trang này. Về trang chủ!</Typography>
+          <Typography variant='body2'>Vui lòng quay lại trang chủ!</Typography>
         </BoxWrapper>
         <Link passHref href='/'>
           <Button component='a' variant='contained' sx={{ px: 5.5, my: 3 }}>
-            Về trang chủ
+            trang chủ
           </Button>
         </Link>
       </Box>

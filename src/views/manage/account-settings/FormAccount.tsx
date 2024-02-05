@@ -129,7 +129,7 @@ const Form = ({ data, setPostSuccess, isEdit, closeDialogs }: any) => {
                 size='small'
                 value={values.confirmPassword}
                 onChange={handleChange('confirmPassword')}
-                type={showPassword ? 'text' : 'confirmPassword'}
+                type={showPassword ? 'text' : 'password'}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position='end'>
