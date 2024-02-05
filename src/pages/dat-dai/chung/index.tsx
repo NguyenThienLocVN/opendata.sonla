@@ -12,7 +12,7 @@ import { checkAccessPermission } from 'src/@core/layouts/checkAccessPermission';
 import Error401 from 'src/pages/401';
 
 const LandManagementCommon = () => {
-  const [postSuccess, setPostSuccess] = useState(false)
+  const [, setPostSuccess] = useState(false)
   const handlePostSuccess = () => {
     setPostSuccess(prevState => !prevState)
   }
