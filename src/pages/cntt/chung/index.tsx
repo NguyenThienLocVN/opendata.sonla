@@ -7,6 +7,9 @@ import { GridColDef } from '@mui/x-data-grid'
 import ShowFilePDF from 'src/@core/components/show-file-pdf'
 import DeleteData from 'src/@core/components/delete-data'
 import GetAppIcon from '@mui/icons-material/GetApp'
+import { useRouter } from 'next/router'
+import { checkAccessPermission } from 'src/@core/layouts/checkAccessPermission'
+import Error401 from 'src/pages/401'
 
 const LandManagementCommon = () => {
   const [postSuccess, setPostSuccess] = useState(false)
@@ -175,7 +178,12 @@ const LandManagementCommon = () => {
     }
   ]
 
-  return (
+  const router = useRouter();
+  const routePath = router.pathname; 
+  const routeSegment = routePath.split('/')[1];
+
+  return checkAccessPermission(routeSegment, 'view') ? 
+  (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={12}>
         <Paper elevation={3} sx={{ p: 0, height: '100%' }}>
@@ -193,7 +201,7 @@ const LandManagementCommon = () => {
         </Paper>
       </Grid>
     </Grid>
-  )
+  ) : <Error401 />
 }
 
 export default LandManagementCommon
