@@ -10,6 +10,7 @@ import GetAppIcon from '@mui/icons-material/GetApp'
 import { useRouter } from 'next/router'
 import { checkAccessPermission } from 'src/@core/layouts/checkAccessPermission'
 import Error401 from 'src/pages/401'
+import Breadcrumb from 'src/@core/components/breadcrumb'
 
 const LandManagementCommon = () => {
   const [postSuccess, setPostSuccess] = useState(false)
@@ -27,7 +28,7 @@ const LandManagementCommon = () => {
       stt: 1,
       soQDTCQ: '19/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
       filePath: 'path/to/pdf2.pdf'
     },
     {
@@ -35,7 +36,7 @@ const LandManagementCommon = () => {
       stt: 2,
       soQDTCQ: '17/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       qd_bosung: { soQDTCQ: 'QD002', filePDF: 'path/to/pdf2.pdf' },
       filePath: 'path/to/pdf2.pdf'
@@ -45,7 +46,7 @@ const LandManagementCommon = () => {
       stt: 3,
       soQDTCQ: '16/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -54,7 +55,7 @@ const LandManagementCommon = () => {
       stt: 4,
       soQDTCQ: '15/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -63,7 +64,7 @@ const LandManagementCommon = () => {
       stt: 5,
       soQDTCQ: '14/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -72,7 +73,7 @@ const LandManagementCommon = () => {
       stt: 6,
       soQDTCQ: '10/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -81,7 +82,7 @@ const LandManagementCommon = () => {
       stt: 7,
       soQDTCQ: '11/2023/TT-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -90,7 +91,7 @@ const LandManagementCommon = () => {
       stt: 8,
       soQDTCQ: '08/VBHN-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -99,7 +100,7 @@ const LandManagementCommon = () => {
       stt: 9,
       soQDTCQ: '06/VBHN-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     },
@@ -108,7 +109,7 @@ const LandManagementCommon = () => {
       stt: 10,
       soQDTCQ: '05/VBHN-BTNMT',
       ngayKy: '2024-02-02',
-      trichyeuvb:'Dữ liệu phòng',
+      trichyeuvb: 'Dữ liệu phòng',
 
       filePath: 'path/to/pdf2.pdf'
     }
@@ -118,7 +119,7 @@ const LandManagementCommon = () => {
   // const [loading, setLoading] = useState(false)
 
   const columns: GridColDef[] = [
-    { field: 'stt', headerAlign: 'center', align: 'center',headerName: 'STT', },
+    { field: 'stt', headerAlign: 'center', align: 'center', headerName: 'STT', },
     {
       field: 'soQDTCQ',
       headerAlign: 'center',
@@ -167,29 +168,30 @@ const LandManagementCommon = () => {
   ]
 
   const router = useRouter();
-  const routePath = router.pathname; 
+  const routePath = router.pathname;
   const routeSegment = routePath.split('/')[1];
 
-  return checkAccessPermission(routeSegment, 'view') ? 
-  (
-    <Grid container spacing={3}>
-      <Grid item xs={12} sm={12} md={12}>
-        <Paper elevation={3} sx={{ p: 0, height: '100%' }}>
-          <Toolbar variant='dense'>
-            <Grid container justifyContent={'end'}>
-            <Grid item xs={12} sm={12} md={4}>
-              <TextField sx={{ p: 0 }} size='small' fullWidth variant='outlined' placeholder='Số hiệu văn bản...' />
-            </Grid>
-              <Grid item>
-                <FormLicenseFee setPostSuccess={handlePostSuccess} isEdit={false} />
+  return checkAccessPermission(routeSegment, 'view') ?
+    (
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={12} md={12}>
+          <Paper elevation={3} sx={{ p: 0, height: '100%' }}>
+            <Toolbar variant='dense'>
+              <Grid container justifyContent={'end'}>
+                <Grid item xs={12} sm={12} md={4}>
+                  <TextField sx={{ p: 0 }} size='small' fullWidth variant='outlined' placeholder='Số hiệu văn bản...' />
+                </Grid>
+                <Grid item>
+                  <FormLicenseFee setPostSuccess={handlePostSuccess} isEdit={false} />
+                </Grid>
               </Grid>
-            </Grid>
-          </Toolbar>
-          <DataGridComponent rows={data} columns={columns} />
-        </Paper>
+            </Toolbar>
+            {Breadcrumb(routePath)}
+            <DataGridComponent rows={data} columns={columns} />
+          </Paper>
+        </Grid>
       </Grid>
-    </Grid>
-  ) : <Error401 />
+    ) : <Error401 />
 }
 
 export default LandManagementCommon
