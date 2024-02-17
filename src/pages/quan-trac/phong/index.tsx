@@ -10,7 +10,6 @@ import GetAppIcon from '@mui/icons-material/GetApp'
 import { useRouter } from 'next/router'
 import { checkAccessPermission } from 'src/@core/layouts/checkAccessPermission'
 import Error401 from 'src/pages/401'
-import Breadcrumb from 'src/@core/components/breadcrumb'
 
 const LandManagementCommon = () => {
   const [postSuccess, setPostSuccess] = useState(false)
@@ -186,7 +185,6 @@ const LandManagementCommon = () => {
                 </Grid>
               </Grid>
             </Toolbar>
-            {Breadcrumb(routePath)}
             <DataGridComponent rows={data} columns={columns} />
           </Paper>
         </Grid>
