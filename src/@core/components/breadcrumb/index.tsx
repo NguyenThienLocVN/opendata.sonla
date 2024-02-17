@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
-import { useRouter } from "next/router";
 
-const Breadcrumb = ({url}:any) => { 
+const Breadcrumb = () => { 
     // const router = useRouter();
     // const routePath = router.pathname;
     // const firstSegment = url.split('/')[0]
