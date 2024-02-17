@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 const Breadcrumb = ({url}:any) => { 
     // const router = useRouter();
     // const routePath = router.pathname;
-    const firstSegment = url.split('/')[0]
+    // const firstSegment = url.split('/')[0]
     // const secondSegment = routePath.split('/')[1]
 
     
@@ -28,7 +28,7 @@ const Breadcrumb = ({url}:any) => {
     // }
 
     return (
-        <Typography variant='h6' sx={{ mr: 2 }}>{firstSegment}</Typography>
+        <Typography variant='h6' sx={{ mr: 2 }}>Test</Typography>
     )
 }
 

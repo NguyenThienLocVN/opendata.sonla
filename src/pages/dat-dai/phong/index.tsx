@@ -186,7 +186,6 @@ const LandManagementCommon = () => {
               </Grid>
             </Grid>
           </Toolbar>
-          <Breadcrumb url={routePath} />
           <DataGridComponent rows={data} columns={columns} />
         </Paper>
       </Grid>
