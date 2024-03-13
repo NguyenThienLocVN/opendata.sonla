@@ -66,7 +66,7 @@ const UserDropdown = () => {
       if (token) {
         const decodedToken = jwt_decode(token) as DecodedToken;
         setUserName(decodedToken['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'])
-        setRole(decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'].toUpperCase())
+        setRole(decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'])
       }
     }
   }, [])
