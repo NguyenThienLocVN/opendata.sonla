@@ -254,40 +254,6 @@ const navigation = (): VerticalNavItemsType => {
       sectionTitle: 'Quản lý'
     },
     {
-      title: 'Dữ liệu',
-      primaryPath: 'he-thong',
-      children: [
-        {
-          title: 'Loại công trình',
-          path: '/loai-cong-trinh'
-        },
-        {
-          title: 'Loại giấy phép',
-          path: '/loai-giay-phep'
-        },
-        {
-          title: 'Doanh nghiệp',
-          path: '/doanh-nghiep'
-        },
-        {
-          title: 'Sông',
-          path: '/song'
-        },
-        {
-          title: 'Lưu vực',
-          path: '/luu-vuc'
-        },
-        {
-          title: 'Tầng chứa nước',
-          path: '/tang-chua-nuoc'
-        },
-        {
-          title: 'File hướng dẫn sử dụng',
-          path: '#'
-        },
-      ]
-    },
-    {
       title: 'Hệ thống',
       primaryPath: 'he-thong',
       children: [
