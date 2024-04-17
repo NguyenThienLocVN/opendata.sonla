@@ -133,7 +133,7 @@ const LandManagementCommon = () => {
       field: 'soQDTCQ',
       headerAlign: 'center',
       headerName: 'Số hiệu văn bản',
-
+      width: 200,
       renderCell: (data: any) => <ShowFilePDF name={data.row.soQDTCQ} src={data.row.filePDF} />
     },
     {

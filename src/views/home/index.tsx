@@ -45,7 +45,7 @@ const Home = () => {
           <Grid container direction='row' justifyContent='center' spacing={1} xs={10} md={9} sx={{ p: 2 }}>
             <Link href='/dat-dai/chung'>
               <Grid item xs={6} md={2}>
-                <Card sx={{ maxWidth: 200 }}>
+                <Card sx={{ width: 200, margin: '0 10px' }}>
                   <CardActionArea>
                     <CardMedia
                       component='img'
@@ -70,7 +70,7 @@ const Home = () => {
 
             <Link href='/gia-dat-gpmb/chung'>
               <Grid item xs={6} md={2}>
-                <Card sx={{ maxWidth: 200 }}>
+                <Card sx={{ width: 200, margin: '0 10px' }}>
                   <CardActionArea>
                     <CardMedia
                       component='img'
@@ -95,7 +95,7 @@ const Home = () => {
 
             <Link href='/tnn-ks-kttv/chung'>
               <Grid item xs={6} md={2}>
-                <Card sx={{ maxWidth: 200 }}>
+                <Card sx={{ width: 200, margin: '0 10px' }}>
                   <CardActionArea>
                     <CardMedia
                       component='img'
@@ -119,7 +119,7 @@ const Home = () => {
             </Link>
             <Link href='/moi-truong/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
@@ -143,7 +143,7 @@ const Home = () => {
             </Link>
             <Link href='/thanh-tra/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
@@ -167,7 +167,7 @@ const Home = () => {
             </Link>
             <Link href='/van-phong/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
@@ -193,7 +193,7 @@ const Home = () => {
           <Grid container direction='row' justifyContent='center' spacing={1} xs={10} md={9} sx={{ p: 2 }}>
           <Link href='/dang-ky-dat-dai/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
@@ -217,7 +217,7 @@ const Home = () => {
             </Link>
             <Link href='/quan-trac/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
@@ -241,7 +241,7 @@ const Home = () => {
             </Link>
             <Link href='/cntt/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
@@ -265,7 +265,7 @@ const Home = () => {
             </Link>
             <Link href='/quy-dat/chung'>
             <Grid item xs={6} md={2}>
-              <Card sx={{ maxWidth: 200 }}>
+              <Card sx={{ width: 200, margin: '0 10px' }}>
                 <CardActionArea>
                   <CardMedia
                     component='img'
