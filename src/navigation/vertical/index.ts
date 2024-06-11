@@ -80,11 +80,11 @@ const navigation = (): VerticalNavItemsType => {
         }, 
         {
           title: 'Website tài nguyên nước',
-          path: '#'
+          path: 'https://tnn.sotnmt.sonla.gov.vn/'
         }, 
         {
           title: 'Website khí tượng thủy văn',
-          path: '#'
+          path: 'https://kttv.sotnmt.sonla.gov.vn/'
         }
       ]
     },
